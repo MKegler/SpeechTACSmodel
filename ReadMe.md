@@ -2,6 +2,8 @@
 
 ### Implementation of the model introduced in Kegler M. & Reichenbach T. (submitted) *Modelling the effects of transcranial alternating current stimulation on the neural encoding of speech in noise*
 
+#### Demo.ipynb is an annotated jupyter notebook including sample simulations of the model
+
 The core of the neural network encoding natural speech is mainly based on [Hyafil et al., 2015](https://elifesciences.org/articles/06213.pdf). This notebook is a demo of the network processing a speech utterance and encoding its content through spiking activity. In particular, the slower theta activity parses the utterance into chunks and faster gamma activity captures acoustic content of each chunk. Custom written code is divided into 5 modules:
 - **PyNSL** - Direct Python port of parts of NSL toolbox [Chi et al., 2005](https://asa.scitation.org/doi/full/10.1121/1.1945807). The original Matlab implementation is available [here](http://nsl.isr.umd.edu/downloads.html).
 - **Network** - Core implementation of the model used in simulations. Includes all the equations and parameters with hard-coded parameter values.
