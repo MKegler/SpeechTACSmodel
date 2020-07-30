@@ -58,20 +58,21 @@ def run(T, dt, Iext=None, params=None, connectivity=None, seed=None):
 
         if connectivity is None:
             # connectivity setup (all in nS)
+            # Connectivity matrix preallallocation
             g = np.zeros((N,N))
             # Theta connectivity
-            gTee = 0.
-            gTii = 4.32/nTI # I-I conductance
-            gTie = 2.07/nTE # E-I conductance
-            gTei = 3.33/nTI # I-E conductance
+            gTee = 0./nTe   # E-E conductance [nS]
+            gTii = 4.32/nTI # I-I conductance [nS]
+            gTie = 2.07/nTE # I-E conductance [nS]
+            gTei = 3.33/nTI # E-I conductance [nS]
             # Gamma connectivity
-            gGee = 0./nGE
-            gGei = 10./nGI # I-E conductance
-            gGie = 5./nGE # E-I conductance
-            gGii = 0./nGI
+            gGee = 0./nGE   # E-E conductance [nS]
+            gGei = 10./nGI  # E-I conductance [nS]
+            gGie = 5./nGE   # I-E conductance [nS]
+            gGii = 0./nGI   # I-I conductance [nS]
             # Coupling
-            gGeTe = 1./nTE #
-            # Filling in connectivity to_matrix column by column
+            gGeTe = 1./nTE # Te-Ge conductance [nS]
+            # Filling in connectivity matrix using to_matrix populating it on a column by column
             g[:,all_TE] = np.tile(to_matrix(n_count, [gTee, gTie , 0, 0]), (1,nTE))
             g[:,all_TI] = np.tile(to_matrix(n_count, [gTei, gTii, 0, 0]), (1,nTI))
             g[:,all_GE] = np.tile(to_matrix(n_count, [gGeTe, 0, gGee, gGie]), (1,nGE))
