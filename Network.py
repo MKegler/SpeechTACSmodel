@@ -61,7 +61,7 @@ def run(T, dt, Iext=None, params=None, connectivity=None, seed=None):
             # Connectivity matrix preallallocation
             g = np.zeros((N,N))
             # Theta connectivity
-            gTee = 0./nTe   # E-E conductance [nS]
+            gTee = 0./nTE   # E-E conductance [nS]
             gTii = 4.32/nTI # I-I conductance [nS]
             gTie = 2.07/nTE # I-E conductance [nS]
             gTei = 3.33/nTI # E-I conductance [nS]
