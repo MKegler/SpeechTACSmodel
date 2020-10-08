@@ -1,6 +1,6 @@
 ## Modelling the effects of transcranial alternating current stimulation on the neural encoding of speech in noise
 
-### Implementation of the model introduced in Kegler M. & Reichenbach T. (under review) *Modelling the effects of transcranial alternating current stimulation on the neural encoding of speech in noise*
+### Implementation of the model introduced in Kegler M. & Reichenbach T. (2020). Modelling the effects of transcranial alternating current stimulation on the neural encoding of speech in noise. *NeuroImage*. DOI: [10.1016/j.neuroimage.2020.117427](https://doi.org/10.1016/j.neuroimage.2020.117427).
 
 #### Demo.ipynb is an annotated jupyter notebook including sample simulations of the model
 
@@ -30,4 +30,4 @@ Author: Mikolaj Kegler (mikolaj.kegler16@imperial.ac.uk)
 
 In case of any issues, questions or suggestions, please do open an issue in the repository and/or email me directly.
 
-Last updated: 31th July 2020
+Last updated: 08 October 2020
