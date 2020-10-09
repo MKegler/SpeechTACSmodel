@@ -72,7 +72,7 @@ def get_chunks(detected, syl, syl_labels, dt, offset=20.):
 def spkd(s1, s2, cost):
     '''
     Fast implementation of victor-purpura spike distance (faster than neo & elephant python packages)
-    Direct Python port of http://www-users.med.cornell.edu/~jdvicto/pubalgor.htmlself.
+    Direct Python port of http://www-users.med.cornell.edu/~jdvicto/pubalgor.html
     The below code was tested against the original implementation and yielded exact results.
     All credits go to the authors of the original code.
 

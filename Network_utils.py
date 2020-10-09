@@ -12,18 +12,18 @@ from PyNSL import pycochlea as cochlea
 
 def load_TIMIT(path, path_noise=None, mode='clean', SNR_dB=np.inf, fs=8000.):
     '''
-    Function for loading TIMIT sentences, and associatiated phonetic
+    Function for loading TIMIT sentences, and associated phonetic
     transcription and preprocessing them for simulating in the network.
 
     Inputs:
-        path: path to the TIMIT setence (without .wav)
+        path: path to the TIMIT sentence (without .wav)
         path_noise: path to the file containing noise (without .wav, default: None -> no noise)
         fs: sampling rate used in the cochlear processing step (default: 8kHz)
         SNR_dB: SNR of the input SPiN, in dB (default: np.inf -> clean speech only)
         mode: Mixing mode: clean | babble | deaf (default: clean -> no noise)
     Outputs:
         channels: auditory channels representing inputs to the model in pA
-        syl_bounds: syllable onset times (last is the end of the sentece)
+        syl_bounds: syllable onset times (last is the end of the sentence)
         syl_lables: syllable lables (one element shorter than bounds)
         full_sent: full sentence transcription
     '''
@@ -64,7 +64,7 @@ def smooth(x,w=5):
 
 def get_network_input(channels, S, T, fs=8000, fs_out=100000, fds=100, Tsil=[0.5,0.2]):
     '''
-    Obtain the input to the all excictatory neurons in the network given
+    Obtain the input to the all excitatory neurons in the network given
     spectral (S) and temporal (T) part of the kernel. Implementation based on (Hyafil, et al., 2015)
 
     Inputs:

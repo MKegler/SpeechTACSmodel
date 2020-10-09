@@ -87,7 +87,7 @@ def process(path_signal, path_noise=None, mode='clean', SNR=np.inf, fs_out=8000.
             'deaf' - do not include target speaker in the mix (i.e. noTarget condition)
         SNR: desired SNR of the mix, in dB
         fs_out: sampling rate of the obtained auditory channels
-        paras: parameters for the NSL early auditory procesing model (obtained from Hyafil et al., 2015)
+        paras: parameters for the NSL early auditory processing model (obtained from Hyafil et al., 2015)
         COCHBA: pre-loaded cochlear filterbank (if None, will be loaded)
     Outputs:
         channels_up: upsampled output of the model of early auditory processing

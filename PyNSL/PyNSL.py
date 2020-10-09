@@ -1,9 +1,9 @@
 '''
 Direct Python port of a few functions from NSL toolbox implementing
 early stage auditory processing. All credits go to the original authors.
-The below implementaion has been tested against the original 
+The below implementation has been tested against the original 
 Matlab code (http://nsl.isr.umd.edu/downloads.html) and yielded identical results.
-Implmentaion: Mikolaj Kegler (mikolaj.kegler16@imperial.ac.uk)
+Implementation: Mikolaj Kegler (mikolaj.kegler16@imperial.ac.uk)
 '''
 
 import numpy as np
